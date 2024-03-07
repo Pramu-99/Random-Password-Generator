@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Password Generator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        #passwordDisplay {
+            resize: none;
+        }
+
+        .icon-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .icon-container i {
+            position: absolute;
+            right: 10px;
+            bottom: 5px;
+        }
+    </style>
+</head>
+
+<body class="container col-lg-4 d-flex flex-column min-vh-100">
+    <div class="container-fluid bg-dark text-light p-4 mt-4 flex-grow-1">
+        <div class="text-center">
+            <h1>Random Password Generator</h1>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h5 class="mb-3">Select Password Length</h5>
+                <input type="range" min="6" max="16" value="8" class="form-range mb-3" id="myRange">
+                <p>Password Length: <span id="demo">8</span></p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-3">
+            <div class="col-auto">
+                <button class="btn btn-primary" id="generatePassword" onclick="getPassword()">Get Password</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="icon-container mb-3">
+                    <textarea class="form-control bg-transparent text-light rounded-4" rows="1" readonly
+                        id="passwordDisplay"></textarea>
+                    <i class="fa fa-clone" aria-hidden="true" id="icon"></i>
+                    <i class="fa fa-check d-none" aria-hidden="true" id="check"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            © 2024 Copyright: Pramudith Jayasekara
+            <a class="text-white" href="https://github.com/Pramu-99/Random-Password-Generator" target="_blank">
+                <i class="fa fa-hand-point-right ml-2" aria-hidden="true"></i> Github Code
+            </a>
+        </div>
+    </footer>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
